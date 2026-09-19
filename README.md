@@ -3,11 +3,17 @@
 One read-only page holding all three weekly streams, built to be openable on a
 corporate laptop.
 
-| Stream | Day | Source |
+| Stream | Generated | Source |
 |---|---|---|
-| Integrity Coaching | Monday | `../api-inspector/lib/data/digests.ts` — `D_*` |
-| Asset Integrity deep-dive | Friday | `../api-inspector/lib/data/digests.ts` — `AI_*` |
-| Leadership (Ascend) | Sunday | `../ascend/lib/data/briefs.ts` — `B_*` |
+| Asset Integrity deep-dive | Friday 07:00 | `../api-inspector/lib/data/digests.ts` — `AI_*` |
+| Integrity Coaching | Saturday 09:00 | `../api-inspector/lib/data/digests.ts` — `D_*` |
+| Leadership (Ascend) | Sunday 19:00 | `../ascend/lib/data/briefs.ts` — `B_*` |
+
+All three land before Monday, so the whole week's reading is on the work laptop
+by Monday morning. They run on three separate days on purpose: the first two
+write the same two files in `api-inspector`, and all three append to the shared
+topic log that stops the streams repeating each other. Don't collapse them onto
+one morning.
 
 Nothing is authored here. This repo only re-renders what the weekly routines
 already write into the two source repos.

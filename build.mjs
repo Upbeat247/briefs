@@ -47,7 +47,7 @@ for (const e of entries) byStream[e.stream] = (byStream[e.stream] || 0) + 1;
 
 console.log(`docs/index.html  ${(html.length / 1024).toFixed(0)} KB  ${entries.length} briefs`);
 for (const [k, v] of Object.entries(byStream)) {
-  console.log(`  ${STREAMS[k].day.padEnd(9)} ${STREAMS[k].label.padEnd(20)} ${v}`);
+  console.log(`  ${STREAMS[k].label.padEnd(20)} ${v}`);
 }
 console.log(`  newest: ${entries[0].date} — ${entries[0].title.slice(0, 60)}`);
 

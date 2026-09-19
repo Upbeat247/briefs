@@ -21,6 +21,15 @@ if (!git('status', '--porcelain', 'docs')) {
 
 const stamp = new Date().toISOString().slice(0, 10);
 git('commit', '-m', `Rebuild briefs — ${stamp}`);
+
+// Three routines push here across Fri/Sat/Sun; rebase first so a push from
+// another machine or a re-run never turns into a rejected push.
+try {
+  git('pull', '--rebase', 'origin', 'main');
+} catch {
+  console.warn('Rebase pull failed — pushing the local commit as-is.');
+}
+
 git('push', 'origin', 'HEAD');
 
 console.log(`Published. https://upbeat247.github.io/briefs/`);
