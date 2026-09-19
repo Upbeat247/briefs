@@ -5,8 +5,8 @@
   "type": "module",
   "description": "Static read-only reader for the Monday, Friday and Sunday briefs. No dependencies, no network calls.",
   "scripts": {
-    "build": "node build.mjs",
-    "publish": "node build.mjs && node publish.mjs",
-    "offline": "node build.mjs --offline"
+    "build": "node --no-warnings build.mjs",
+    "publish": "node --no-warnings build.mjs && node publish.mjs",
+    "offline": "node --no-warnings build.mjs --offline"
   }
 }
