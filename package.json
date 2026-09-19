@@ -1,0 +1,12 @@
+{
+  "name": "briefs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static read-only reader for the Monday, Friday and Sunday briefs. No dependencies, no network calls.",
+  "scripts": {
+    "build": "node build.mjs",
+    "publish": "node build.mjs && node publish.mjs",
+    "offline": "node build.mjs --offline"
+  }
+}
